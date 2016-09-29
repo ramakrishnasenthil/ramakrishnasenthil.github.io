@@ -1,0 +1,39 @@
+body {
+	font-family: "Arial", Georgia, fantasy;
+	background-image: url("images/space.JPG");
+}
+
+p {
+    padding-top: 10px;
+    padding-right: 600px;
+    padding-bottom: 10px;
+    padding-left: 100px;
+	color: white;
+}
+
+a {
+    padding-bottom: 5px;
+	color: white;
+}
+a:hover{
+	background-color: orange;
+}
+
+center{
+	color: white;
+}
+
+z{
+	
+	color: white;
+	font-size:100px;
+}
+
+x{
+    padding-bottom: 5px;
+	
+    padding-left: 100px;
+}
+caption {
+    text-align: center;
+}
