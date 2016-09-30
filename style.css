@@ -12,11 +12,18 @@ p {
 }
 
 a {
-    padding-bottom: 5px;
+    border-radius: 25px;
+    width: 100px;
+    height: 75px;
+    padding: 5px;
+	background: linear-gradient(to right, red , blue);
 	color: white;
+	transition: 1s;
 }
 a:hover{
-	background-color: orange;
+    color: gray;
+	background: linear-gradient(to right, red , blue);
+	
 }
 
 center{
