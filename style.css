@@ -23,6 +23,8 @@ a {
 	transition: 0.3s;
 }
 a:hover{
+    padding-left: 10px;
+    padding-right: 10px;
     color: Blue;
 	font-size: 20px;
 }
