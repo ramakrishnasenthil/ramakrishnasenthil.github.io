@@ -12,18 +12,19 @@ p {
 }
 
 a {
+    font-size: 15px;
     border-radius: 5px;
     width: 100px;
     height: 75px;
     padding: 5px;
-	background: linear-gradient(to right, red , blue);
+	background: linear-gradient(to right, LightBlue , DarkBlue);
 	opacity: 0.9;
     color: white;
 	transition: 0.3s;
 }
 a:hover{
-    color: gray;
-	
+    color: Blue;
+	font-size: 20px;
 }
 
 
