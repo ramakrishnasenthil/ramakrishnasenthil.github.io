@@ -23,8 +23,8 @@ canvas = Tkinter.Canvas(root, width=WIDTH, height=HEIGHT, bg='black')
 canvas.pack()
 
 #creates shape of the player's arrow with coorsinates x1, y1, x2, y2 
-obj_id = canvas.create_polygon(4,26,15,0,26,26,fill='red')
-obj_id2 = canvas.create_oval(0,0,30,30,outline='red') #circle needed on outside to detect collision
+obj_id = canvas.create_polygon(4,26,15,0,26,26,fill='red3')
+obj_id2 = canvas.create_oval(0,0,30,30,outline='red3') #circle needed on outside to detect collision
 SHIP_RADIUS = 15
 
 #allows to put text in the center, ship in the center, whatever object we want in the middle 
@@ -60,7 +60,7 @@ def create_block():
     x = random.randint(0, WIDTH)
     y = random.randint(-200,-100)
     r = random.randint(MIN_BLOCK_RADIUS, MAX_BLOCK_RADIUS)
-    id1 = canvas.create_oval(x-r, y-r, x+r, y+r, fill='blue') #each object in tkinter needs to be set to an id so we can delete it
+    id1 = canvas.create_oval(x-r, y-r, x+r, y+r, fill='blue4') #each object in tkinter needs to be set to an id so we can delete it
     block_id.append(id1)
     block_radius.append(r)
     block_speed.append(random.randint(1, MAX_BLOCK_SPEED))
