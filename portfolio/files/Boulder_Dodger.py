@@ -107,8 +107,7 @@ def distance(id1,id2):
     return math.sqrt((x2-x1)**2+(y2-y1)**2)# distance formula
 
 #detects if actually collides, so that we can determine whether the game is over
-def collision():
-    global num_of_lives
+def collision(num_of_lives):
     game = True
     for id in range(len(block_id)-1,-1,-1):
         if num_of_lives < 1: #When the number of lives is less than 1, then that means the game is over
@@ -133,8 +132,7 @@ def collision():
                 for i in range(10):
                     create_block()
                 
-    return game#used so that we can call later in main loop 
-
+    return game,num_of_lives #used so that we can call later in main loop 
 
 #function to show score on screen
 def show_score(score):
@@ -228,7 +226,8 @@ while game != False:
     canvas.bind_all('<Key>',move_obj) #allows key to move 
     if random.randint(0, BLOCK_CHANCE) == 0: #game starts off with 1 in 50 chance
         create_block()
-    if collision() == False:
+    game, num_of_lives = collision(num_of_lives)
+    if game == False:
         canvas.delete(score_text, score_text1, level_text, level_text1)
         break
     move_blocks()
