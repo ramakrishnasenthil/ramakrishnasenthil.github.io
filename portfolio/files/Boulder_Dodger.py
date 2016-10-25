@@ -109,13 +109,13 @@ def distance(id1,id2):
 #detects if actually collides, so that we can determine whether the game is over
 def collision(num_of_lives):
     game = True
-    for id in range(len(block_id)-1,-1,-1):
+    for id in range(len(block_id)-1,-1,-1): #reads list backwards, so it crashes less
         if num_of_lives < 1: #When the number of lives is less than 1, then that means the game is over
             game = False
             break
         else:
-            d = distance(obj_id2, block_id[id-1])
-            r = SHIP_RADIUS + block_radius[id-1]
+            d = distance(obj_id2, block_id[id])
+            r = SHIP_RADIUS + block_radius[id]
             if d < r: #if distance is less than combined radii, then subtract one life.
                 num_of_lives -= 1
                 lives_text2 = canvas.create_text(MID_X,MID_Y,fill='white', font=('Helvetica', 30))
