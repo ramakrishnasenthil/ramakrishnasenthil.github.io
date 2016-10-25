@@ -113,8 +113,8 @@ def collision(num_of_lives):
         if num_of_lives < 1: #When the number of lives is less than 1, then that means the game is over
             game = False
         else:
-            d = distance(obj_id2, block_id[id])
-            r = SHIP_RADIUS + block_radius[id]
+            d = distance(obj_id2, block_id[id-1])
+            r = SHIP_RADIUS + block_radius[id-1]
             if d < r: #if distance is less than combined radii, then subtract one life.
                 num_of_lives -= 1
                 lives_text2 = canvas.create_text(MID_X,MID_Y,fill='white', font=('Helvetica', 30))
