@@ -112,7 +112,6 @@ def collision(num_of_lives):
     for id in range(len(block_id)-1,-1,-1): #reads list backwards, so it crashes less
         if num_of_lives < 1: #When the number of lives is less than 1, then that means the game is over
             game = False
-            break
         else:
             d = distance(obj_id2, block_id[id])
             r = SHIP_RADIUS + block_radius[id]
